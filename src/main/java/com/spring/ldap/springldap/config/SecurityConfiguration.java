@@ -29,7 +29,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .ldapAuthentication()
-                .userDnPatterns("uid={0},ou=people")
+                .userDnPatterns("uid={0},ou=employees")
                 .groupSearchBase("ou=groups")
                 .contextSource(contextSource())
                 .passwordCompare()
